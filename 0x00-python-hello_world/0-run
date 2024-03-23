@@ -1,2 +1,2 @@
 #!/bin/bash
-cat $PYFILE | python
+python3 ./$PYFILE
