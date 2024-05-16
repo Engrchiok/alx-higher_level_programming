@@ -3,8 +3,9 @@ def uppercase(str):
     a = 0;
     while a < len(str):
         if str[a] >= 'a' and str[a] <= 'z':
-            print("{}".format(chr(ord(str[a]) - 32)), end="")
+            b = chr(ord(str[a]) - 32)
         else:
-            print("{}".format(str[a]), end="")
+            b = str[a]
+        print("{}".format(b), end="")
         a += 1
     print("".format())
