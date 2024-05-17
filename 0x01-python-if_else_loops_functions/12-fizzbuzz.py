@@ -9,5 +9,5 @@ def fizzbuzz():
         elif a % 5 == 0 and a % 3 != 0:
             print("buzz ", end="")
         else:
-            print(f"{a} ", end="")
+            print("{} ".format(a), end="")
         a += 1
