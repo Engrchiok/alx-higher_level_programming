@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 def fizzbuzz():
-    a = 1
     for a in range(1, 101):
         if a % 3 == 0 and a % 5 == 0:
             print("fizzbuzz ", end="")
@@ -10,4 +9,3 @@ def fizzbuzz():
             print("buzz ", end="")
         else:
             print("{} ".format(a), end="")
-        a += 1
