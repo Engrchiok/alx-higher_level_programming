@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def fizzbuzz():
     a = 1
-    while a <= 100:
+    for a in range(1, 101):
         if a % 3 == 0 and a % 5 == 0:
             print("fizzbuzz ", end="")
         elif a % 3 == 0 and a % 5 != 0:
