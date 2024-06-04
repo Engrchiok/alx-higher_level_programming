@@ -9,3 +9,5 @@ if __name__ == "__main__":
         print(f"{len(sys.argv) - 1} arguments.")
     else:
         pass
+else:
+    pass
