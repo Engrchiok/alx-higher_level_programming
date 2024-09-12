@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def no_c(my_string):
-    '''removes all "c" and "C" characters'''
+ #   '''removes all "c" and "C" characters'''
     if my_string == None:
         return
     if type(my_string) != str:
@@ -11,6 +11,6 @@ def no_c(my_string):
         if i == 'c' or i == 'C':
             continue
         else:
-            a = a + i
+            a += i
     return (a)
 
