@@ -2,6 +2,6 @@
 
 def multiple_returns(sentence):
     '''returns tuple of string length and first chatacter of a sentence'''
-    if sentence == None:
-        sentence = ''
+    if len(sentence) == 0:
+        sentence[0] = None
     return (len(sentence), sentence[0])
