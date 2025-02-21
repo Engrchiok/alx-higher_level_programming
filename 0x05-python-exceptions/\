@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+
+def safe_print_list(my_list=[], x=0):
+    a = []
+    if x > 0:
+        for i in range(x):
+            a.append(my_list[i])
+        return int(a)
