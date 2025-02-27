@@ -3,6 +3,7 @@ def safe_print_integer_err(value):
     try:
         print("{:d}".format(value))
     except Exception as e:
-        print("Exception: {}".format(e), file = open("/dev/stderr", "w"))
+        with open("/dev/stderr", "w") as f:
+            f.write("Exception: {}\n".format(e))
         return False
     return True
