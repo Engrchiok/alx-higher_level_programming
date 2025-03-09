@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-This is a module whose content is only one class, named Square.
-"""
+"""This is a module whose content is only one class, named Square."""
 
 class Square:
     """This is a class that creates a square class object."""
