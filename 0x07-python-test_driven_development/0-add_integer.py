@@ -21,7 +21,7 @@ def add_integer(*args):
         int: the addition of a and b.
 
     Raises:
-        TypeError: The arguments a and b for the function, must be an Integer or a float.
+        TypeError: If the arguments a and b for the function, are neither Integers nor floats.
 
     """
 

@@ -18,8 +18,8 @@ def matrix_divided(*inp):
         list: A new matrix, which is a list of a lists.
 
     Raises:
-        TypeError: matrix must be a matrix (list of lists) of integers/floats. Each row of the matrix must have the same size. div must be a number
-        ZeroDivisionError: division by zero
+        TypeError: if matrix is not a matrix (list of lists) of integers/floats. if each row of the matrix is not the same size. if div is not a number
+        ZeroDivisionError: if the division is by zero
 
     """
 
