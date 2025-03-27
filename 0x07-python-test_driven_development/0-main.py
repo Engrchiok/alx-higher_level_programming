@@ -18,3 +18,5 @@ try:
     print(add_integer())
 except Exception as e:
     print(e)
+
+print(add_integer(g, h))

@@ -10,7 +10,7 @@ The function parameters, `a` and `b` must be integers or floats, otherwise raise
 `a` and `b` must be first casted to integers if they are float.
 """
 
-def add_integer(a = None, b=98):
+def add_integer(*args):
     """Function that adds 2 integers.
 
     Args:
@@ -25,6 +25,14 @@ def add_integer(a = None, b=98):
 
     """
 
+    if len(args) > 2:
+        raise TypeError("Only two arguments are expected for parameters a and b, but parameter b as a default value of 3")
+    elif len(args) == 2:
+        a, b = args[0], args[1]
+    elif len(args) == 1:
+        a, b = args[0], 98
+    else:
+        a, b = None, 98
     if float is not type(a) is not int: #a must be integers or floats
         raise TypeError("a must be an integer")
 
@@ -38,4 +46,3 @@ def add_integer(a = None, b=98):
             b = int(b)
 
     return (a + b)
-

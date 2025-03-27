@@ -36,6 +36,12 @@ Now use it:
         ...     print(e)
         ...
         a must be an integer
+	>>> try:
+        ...     print(add_integer(1, 2, 3))
+        ... except Exception as e:
+        ...     print(e)
+        ...
+        Only two arguments are expected for parameters a and b, but parameter b as a default value of 3
 
 if __name__ == "__main__":
 	import doctest
