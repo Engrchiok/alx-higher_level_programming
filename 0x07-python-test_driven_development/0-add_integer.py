@@ -33,6 +33,7 @@ def add_integer(*args):
         a, b = args[0], 98
     else:
         a, b = None, 98
+
     if float is not type(a) is not int: #a must be integers or floats
         raise TypeError("a must be an integer")
 

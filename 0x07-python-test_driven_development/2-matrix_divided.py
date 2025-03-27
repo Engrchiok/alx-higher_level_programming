@@ -1,13 +1,14 @@
 #!/usr/bin/python3
-"""This module contains a function that divides all elements of a matrix."""
+"""This module contains a function with two parameters ``matrix`` and ``div``. This function is expected to divide all elements of a matrix.
+``matrix`` must be a list of lists of integers or floats, otherwise raise a TypeError exception with the message `matrix must be a matrix (list of lists) of integers/floats`.
+Each row of the `matrix` must be of the same size, otherwise raise a TypeError exception with the message `Each row of the matrix must have the same size`.
+``div`` must be a number (integer or float), otherwise raise a TypeError exception with the message `div must be a number`.
+``div`` can’t be equal to 0, otherwise raise a ZeroDivisionError exception with the message `division by zero`.
+All elements of the matrix should be divided by ``div``, rounded to 2 decimal places.
+"""
 
-def matrix_divided(matrix, div):
-    """This is a function that divides all elements of a matrix.
-    ``matrix`` must be a list of lists of integers or floats, otherwise raise a TypeError exception with the message `matrix must be a matrix (list of lists) of integers/floats`
-    Each row of the `matrix` must be of the same size, otherwise raise a TypeError exception with the message `Each row of the matrix must have the same size`
-    ``div`` must be a number (integer or float), otherwise raise a TypeError exception with the message `div must be a number`
-    ``div`` can’t be equal to 0, otherwise raise a ZeroDivisionError exception with the message `division by zero`
-    All elements of the matrix should be divided by ``div``, rounded to 2 decimal places
+def matrix_divided(*inp):
+    """This is a function called ``matrix_divided``, that divides all elements of a matrix.
 
     Args:
         matrix (list): the first parameter which is a list of lists.
@@ -16,7 +17,16 @@ def matrix_divided(matrix, div):
     Returns:
         list: A new matrix, which is a list of a lists.
 
+    Raises:
+        TypeError: matrix must be a matrix (list of lists) of integers/floats. Each row of the matrix must have the same size. div must be a number
+        ZeroDivisionError: division by zero
+
     """
+
+    if len(inp) != 2:
+        raise Exception("This function requires two arguments")
+    else:
+        matrix, div = inp[0], inp[1]
 
     if type(matrix) is not list: #``matrix`` must be a list
         try:
