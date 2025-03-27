@@ -29,3 +29,9 @@ Now use it:
 	...     print(e)
 	...
 	div must be a number
+	>>> try:
+	...     print(matrix_divided(4, 'j'))
+	... except Exception as e:
+	...     print(matrix_divided(4, 'j'))
+	...
+	matrix must be a matrix (list of lists) of integers/floats
