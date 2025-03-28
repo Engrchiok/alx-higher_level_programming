@@ -23,6 +23,7 @@ def print_square(*args):
     if len(args) != 1:
         raise ValueError("Only one argument is required")
     else:
+        size = args[0]
         if type(size) is not int:
             raise TypeError("size must be an integer")
         elif size < 0:
