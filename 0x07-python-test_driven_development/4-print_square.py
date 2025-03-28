@@ -7,7 +7,7 @@ if size is less than 0, raise a ValueError exception with the message size must 
 if size is a float and is less than 0, raise a TypeError exception with the message size must be an integer
 """
 
-def print_square(size=None):
+def print_square(*args):
     """Function that prints a square with the character #.
     The function has a Prototype `def print_square(size):`.
 
@@ -20,14 +20,18 @@ def print_square(size=None):
 
     """
 
-    if type(size) is not int:
-        raise TypeError("size must be an integer")
-    elif size < 0:
-        raise ValueError("size must be >= 0")
-    elif type(size) is float and size < 0:
-        raise TypeError("size must be an integer")
+    if len(args) != 1:
+        raise ValueError("Only one argument is required")
     else:
-        for length in range(size):
-            for breadth in range(size):
-                print("#", end="")
-            print("")
+        size = args[0]
+        if type(size) is not int:
+            raise TypeError("size must be an integer")
+        elif size < 0:
+            raise ValueError("size must be >= 0")
+        elif type(size) is float and size < 0:
+            raise TypeError("size must be an integer")
+        else:
+            for length in range(size):
+                for breadth in range(size):
+                    print("#", end="")
+                print("")

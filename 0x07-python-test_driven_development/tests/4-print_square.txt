@@ -41,10 +41,10 @@ Now use it:
         ... except Exception as e:
         ...    print(e)
         ...
-	size must be an integer
+	Only one argument is required
 	>>> try:
         ...    print_square(1, 2, 3)
         ... except Exception as e:
         ...    print(e)
         ...
-	Only only argument is required
+	Only one argument is required
