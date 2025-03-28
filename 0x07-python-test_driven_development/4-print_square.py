@@ -7,7 +7,7 @@ if size is less than 0, raise a ValueError exception with the message size must 
 if size is a float and is less than 0, raise a TypeError exception with the message size must be an integer
 """
 
-def print_square(size):
+def print_square(size=None):
     """Function that prints a square with the character #.
     The function has a Prototype `def print_square(size):`.
 
