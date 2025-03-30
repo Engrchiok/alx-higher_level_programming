@@ -7,7 +7,7 @@ Function Prototype: def text_indentation(text):
 
 """
 
-def text_indentation(text):
+def text_indentation(*string):
     """A function that prints a text with 2 new lines after each of these characters: `.`, `?` and `:`.
     The function Prototype is  `def text_indentation(text):`
 
@@ -18,6 +18,11 @@ def text_indentation(text):
         TypeError: If text argument is not a string
 
     """
+
+    if len(string) != 1: # making sure the right number of arguments is inputed into the function
+        raise ValueError("text_indentaion function requires only one string argument")
+    else:
+        text = string[0]
 
     if type(text) is not str: # `text` argument must be a string
         raise TypeError("text must be a string")
