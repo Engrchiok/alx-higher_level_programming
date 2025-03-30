@@ -10,6 +10,9 @@ First import the text_indentation function from the module 5-text_indentation, a
 
 Using it:
 
+
+Below, is a Test case with a lenghty string
+
 	>>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
 	... Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
 	... Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: \
@@ -46,4 +49,53 @@ Using it:
 	Quae animi affectio suum cuique tribuens atque hanc, quam dico.
 	<BLANKLINE>
 	Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
-	>>>
+
+
+Below is a Test case of `text` not being a string
+
+	>>> try:
+		text_indentation(["""Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
+        ... 	Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
+        ... 	Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: \
+        ... 	Plus semper voluptatis? Teneo, inquit, finem illi videri nihil dolere. \
+        ... 	Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum \
+        ... 	rationi oboediens. Si id dicis, vicimus. Inde sermone vario sex illa a Dipylo \
+        ... 	stadia confecimus. Sin aliud quid voles, postea. Quae animi affectio suum \
+        ... 	cuique tribuens atque hanc, quam dico. Utinam quidem dicerent alium alio \
+        ... 	beatiorem! Iam ruinas videres"""])
+	... exception Exception as e:
+	...	print(e)
+	...
+	text must be a string
+
+
+Below is a Test case of `text` having multiple spaces before and after '.', '?', and ':' characters, to check if it will print the spaces before the start of a line and after the end of a line
+
+	>>> text_indentation("           Hi. Are you coming today? Let me know          now :The Title.")
+	Hi.
+	<BLANKLINE>
+	Are you coming today?
+	<BLANKLINE>
+	Let me know          now:
+	The Title.
+	<BLANKLINE>
+
+
+Below is a Test case of the function having no argument
+
+	>>> try:
+	...	text_indentation()
+	... except Exception as e:
+	...	print(e)
+	...
+	text_indentaion function requires only one string argument
+	
+
+Below is a Test case of the function having multiple arguments 
+
+	>>> try:
+	...	text_indentation("", "")
+	... except Exception as e:
+	...	print(e)
+	...
+	text_indentaion function requires only one string argument

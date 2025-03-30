@@ -19,15 +19,15 @@ def text_indentation(text):
 
     """
 
-    if type(text) is not str:
+    if type(text) is not str: # `text` argument must be a string
         raise TypeError("text must be a string")
     else:
         i = 0
-        while i < len(text):
-            if text[i] == ' ':
+        while i < len(text): # traversing through the string characters
+            if text[i] == ' ': # making sure the first character(s) of a new line/paragrapgh isn't a space(s)
                 i += 1
                 continue
-            elif text[i] != '.' or '?' != text[i] or ':' != text[i]:
+            elif text[i] != '.' or '?' != text[i] or ':' != text[i]: # printing characters till the end of the paragraph
                 while i < len(text):
                     if text[i] == '.' or '?' == text[i] or ':' == text[i]:
                         break
@@ -36,7 +36,10 @@ def text_indentation(text):
                         i += 1
                     if i == len(text):
                         break
-                    if i == ' ' == (i+1):
+                    if i == ' ' and ((i+1) == '.' or (i+1) == '?' or (i+1) == ':'): 
+                        i += 1
+                        break
+                    if i == ' ' == (i+1): # making sure there are no spaces at the end of the paragraph
                         a = i
                         while i < len(text):
                             i += 1
