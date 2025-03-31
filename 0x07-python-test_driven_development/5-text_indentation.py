@@ -41,17 +41,17 @@ def text_indentation(*string):
                         i += 1
                     if i == len(text):
                         break
-                    if text[i] == ' ' and (text[i+1] == '.' or text[i+1] == '?' or text[i+1] == ':'): 
-                        i += 1
-                        break
+                    #if text[i] == ' ' and (text[i+1] == '.' or text[i+1] == '?' or text[i+1] == ':'): 
+                        #i += 1
+                        #break
                     if text[i] == ' ' == text[i+1]: # making sure there are no spaces at the end of the paragraph
                         a = i
                         while i < len(text):
                             i += 1
-                            if text[i + 1] == '.' or text[i+1] == '?' or text[i+1] == ':':
-                                i += 1
+                            if i == len(text): # text[i + 1] == '.' or text[i+1] == '?' or text[i+1] == ':':
+                                # i += 1
                                 break
-                            if text[i+1] != ' ' or text[i+1] != '.' or text[i+1] == '?' or text[i+1] == ':':
+                            if text[i+1] != ' ': #or text[i+1] != '.' or text[i+1] == '?' or text[i+1] == ':':
                                 i = a
                                 break
             if i != len(text):

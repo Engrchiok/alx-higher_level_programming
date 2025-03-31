@@ -76,7 +76,7 @@ Below is a Test case of `text` having multiple spaces before and after '.', '?',
 	<BLANKLINE>
 	Are you coming today?
 	<BLANKLINE>
-	Let me know          now:
+	Let me know          now :
 	The Title.
 	<BLANKLINE>
 
