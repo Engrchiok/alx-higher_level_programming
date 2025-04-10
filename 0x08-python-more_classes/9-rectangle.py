@@ -1,12 +1,15 @@
 #!/usr/bin/python3
 """This module contains a class `Rectangle` that defines a rectangle."""
 
+
 class Rectangle:
-    """This is a class `Rectangle` that defines a rectangle, with Private instance attribute `width`, and with Private instance attribute `height`.
+    """This is a class `Rectangle` that defines a rectangle.
+    With Private instance attribute `width`.
+    And with Private instance attribute `height`.
 
     Attribute:
-        count (int): This is the number of the objects of the class instantiated.
-        print_symbol (str): This is the symbol that print() and str() returns for printing.
+        count (int): The number of the objects of the class instantiated.
+        print_symbol (str): This is the symbol that print() and str() returns.
 
     """
 
@@ -17,20 +20,25 @@ class Rectangle:
         """This is the Instantation method.
 
             Args:
-                width (int, optional): This is the width of the triangle. It has a default value of 0. It's optional value must be an integer and not less than zero.
-                heigth (int, optional): This is the heigth of the triangle. It has a default value of 0. It's optional value must be an integer and not less than zero.
+                width (int, optional): This is the width of the triangle.
+                It has a default value of 0.
+                It's optional value must be an integer and not less than zero.
+                heigth (int, optional): This is the heigth of the triangle.
+                It has a default value of 0.
+                It's optional value must be an integer and not less than zero.
 
         """
 
         self.width = width
         self.height = height
         type(self).number_of_instances += 1
-    
+
     @property
     def width(self):
         """int: The getter method returns the property value of width.
-        The setter method ensures the set value for the property is an integer and not less than zero.
-        
+        The setter method ensures the set value for the property is an integer.
+        And not less than zero.
+
             Raises:
                 TypeError: If width is not an integer.
                 ValueError: If width is less than zero.
@@ -42,8 +50,9 @@ class Rectangle:
     @property
     def height(self):
         """int: The getter method returns the property value of width.
-        The setter method ensures the set value for the property is an integer and not less than zero.
-        
+        The setter method ensures the set value for the property is an integer.
+        And not less than zero.
+
             Raises:
                 TypeError: If width is not an integer.
                 ValueError: If width is less than zero.
@@ -60,6 +69,7 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         else:
             self.__width = value
+
     @height.setter
     def height(self, value):
         if type(value) is not int:
@@ -68,6 +78,7 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = value
+
     def area(self):
         """int: Returns the rectangle area."""
 
@@ -100,17 +111,21 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-        """This is a Static method with prototypr ``def bigger_or_equal(rect_1, rect_2)``, that returns the biggest rectangle based on the area.
+        """This is a Static method, ``def bigger_or_equal(rect_1, rect_2)``.
+        It returns the biggest rectangle based on the area.
 
         Args:
-            rect_1: This is the first positional parameter, and it must be the area of an object of class `Rectangle`.
-            rect_2: This is the first positional parameter, and it must be the area of an object of class `Rectangle`.
+            rect_1: This is the first positional parameter.
+            it must be the area of an object of class `Rectangle`.
+            rect_2: This is the first positional parameter.
+            It must be the area of an object of class `Rectangle`.
 
         Raises:
-            TypeError: If either rect_1 or rect_2 is not an object of class `Rectangle`.
+            TypeError: If either rect_1 or rect_2 is not of class `Rectangle`.
 
         Returns:
-            int: The biggest area between the two Rectangle objects, or the equal area if they are both equal.
+            int: The biggest area between the two Rectangle objects.
+            Or the equal area if they are both equal.
 
         """
 
@@ -125,11 +140,13 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """Class method with prototype ``def square(cls, size=0)``, that returns a new Rectangle instance with width == height == size.
+        """Class method with prototype ``def square(cls, size=0)``.
+        Returns a new Rectangle instance with width == height == size.
 
         Args:
-            size (int): The only parameter of the class method, and it has a default value of zero.
+            size (int): The only parameter of the class method.
+            And it has a default value of zero.
 
         """
-        
+
         return cls(size, size)
