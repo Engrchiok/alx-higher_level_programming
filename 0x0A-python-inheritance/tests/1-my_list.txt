@@ -11,6 +11,8 @@ From 1-my_list module, import MyList class:
 Then test:
 
 >>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
 >>> my_list.append(1)
 >>> my_list.append(4)
 >>> my_list.append(2)
