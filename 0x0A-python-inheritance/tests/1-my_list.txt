@@ -13,6 +13,9 @@ Then test:
 >>> my_list = MyList()
 >>> my_list.print_sorted()
 []
+>>> my_list2 = MyList([2, 3, 4])
+>>> my_list2.print_sorted()
+[2, 3, 4]
 >>> my_list.append(1)
 >>> my_list.append(4)
 >>> my_list.append(2)
