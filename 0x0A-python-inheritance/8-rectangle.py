@@ -34,12 +34,15 @@ class BaseGeometry(object):
         elif value <= 0:
             raise ValueError(f"{name} must be greater than 0")
         else:
-            return value
+            pass
 
 
 class Rectangle(BaseGeometry):
     """This is a class that inherits from ``BaseGeometry``"""
 
     def __init__(self, width, height):
-        self.__width = self.integer_validator("width", width)
-        self.__height = self.integer_validator("height", height)
+        self.integer_validator("width", width)
+        self.__width = width
+
+        self.integer_validator("height", height)
+        self.__height = height
