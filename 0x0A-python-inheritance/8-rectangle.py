@@ -46,8 +46,3 @@ class Rectangle(BaseGeometry):
 
         self.integer_validator("height", height)
         self.__height = height
-
-    def __str__(self):
-        """Return a nice string representation of the rectangle"""
-
-        return f"[Rectangle] {self.__width}/{self.__height}"
